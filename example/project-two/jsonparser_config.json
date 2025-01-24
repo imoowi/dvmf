@@ -1,0 +1,59 @@
+{
+	"TCPServerDevEnable" : 0,
+	"TCPServerDevPort" : 5004,
+	"TCPServerCtlEnable" : 0,
+	"TCPServerCtlPort" : 5005,
+
+	"MqttDevEnable" : 1,
+	"MqttDevServerAddr" : "127.0.0.1",
+	"MqttDevServerPort" : 1883,
+	"MqttDevList" : [
+		{
+			"ClientID" : "15665116558880804848535318438205",
+			"SetTopic" : "cpn/15665116558880804848535318438205/set",
+			"DataTopic" : "cpn/15665116558880804848535318438205/data",
+			"ProjectID" : "default",
+			"ProcessScale" : 10,
+			"DisableAutoQueryConfig" : [
+				{
+					"VarInfoFile" : "AutoQueryConfig1_9666511667548080484856539A224109.json",
+					"Interval" : 300,
+					"Delay" : 20,
+					"QueryCode" : -100,
+					"Condition" : {"CPNName" : "W"}
+				},
+				{
+					"VarInfoFile" : "AutoQueryConfig2_9666511667548080484856539A224109.json",
+					"Interval" : 60,
+					"Delay" : 40,
+					"QueryCode" : 9999,
+					"Condition" : {"CPNType" : "0x15"}
+				}
+			]
+		}
+	],
+
+	"MqttCtlEnable" : 1,
+	"MqttCtlServerAddr" : "127.0.0.1",
+	"MqttCtlServerPort" : 1883,
+	"MqttCtlList" : [
+		{
+			"ClientID" : "project-one-60",
+			"SetTopic" : "project-one-60-controller-set",
+			"DataTopic" : "project-one-60-controller-data",
+			"ProjectID" : "default"
+		}
+	],
+
+	"DevSendTimeout" : 6000,
+	"DevResendTimeout" : 550,
+	"DevResendCount" : 1,
+    "TCPServerKeepAliveInterval" : 30,
+	"TCPServerBandwidthLimit" : 0,
+	"MqttBandwidthLimit" : 0,
+    "MaxQueueLength" : 2000,
+	"CpnNameEncodeMode":0,
+	"DebugInfo" : 0,
+	"TimeSetInterval" : 300,
+	"Plugins" : ["LynkrosJsonParserPlugin_AppBase", "LynkrosJsonParserPlugin_CarData"]
+}
