@@ -1,12 +1,12 @@
 # dvmf
-Distribute variables into multiple files.  [[中文]](README_zh.md)
+将变量分布到多个文件中.  [[English]](README.md)
 
-## Install
+## 安装
 ```go
 go install github.com/imoowi/dvmf@latest
 ```
-## Usage
-Go to example folder, and then exec shell below
+## 使用
+进入example文件夹，运行以下命令
 ```sh
 dvmf env
 //or
