@@ -22,8 +22,8 @@ jwt:
   timeout: 2h0m0s # token 过期时间 格式：0h0m0s
   refresh_token_timeout: 0h5m0s # token 过期时间减去的时间，用于刷新token
 mysql:
-  dsn: {{.MYSQL_USER}}:{{.MYSQL_PASSWORD}}@tcp({{.MYSQL_HOST}}:3306)/{{.SERVICE_CENTER_MYSQL_DB_NAME}}?charset=utf8mb4&parseTime=True&loc=Local&timeout=1000ms
-  casbin: {{.MYSQL_USER}}:{{.MYSQL_PASSWORD}}@tcp({{.MYSQL_HOST}}:3306)/{{.SERVICE_CENTER_MYSQL_DB_NAME}}
+  dsn: {{.MYSQL_USER}}:{{.MYSQL_PASSWORD}}@tcp({{.MYSQL_HOST}}:{{.MYSQL_PORT}})/{{.SERVICE_CENTER_MYSQL_DB_NAME}}?charset=utf8mb4&parseTime=True&loc=Local&timeout=1000ms
+  casbin: {{.MYSQL_USER}}:{{.MYSQL_PASSWORD}}@tcp({{.MYSQL_HOST}}:{{.MYSQL_PORT}})/{{.SERVICE_CENTER_MYSQL_DB_NAME}}
 redis:
   addr: {{.REDIS_HOST}}:{{.REDIS_PORT}}
   password: "{{.REDIS_PASSWORD}}"
